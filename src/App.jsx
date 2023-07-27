@@ -30,9 +30,11 @@ import {
   Orders,
 } from "./pages";
 
-function App() {
-  const [activeMenu, setActiveMenut] = useState(true);
+import { useStateContext } from "./contexts/ContextProvider";
 
+function App() {
+  const { activeMenu } = useStateContext();
+  
   return (
     <div>
       <div>
